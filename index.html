@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#12040d">
+  <title>Happy Birthday, Zaryabb Kamran ❤️</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Great+Vibes&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="style.css" rel="stylesheet">
+</head>
+<body>
+  <div class="ambient-hearts" id="ambientHearts" aria-hidden="true"></div>
+  <div class="confetti-layer" id="confettiLayer" aria-hidden="true"></div>
+
+  <main>
+    <!-- Optional surprise gate. Change the passcode in script.js if you want one. -->
+    <section class="screen gate-screen" id="gateScreen">
+      <div class="step-number">1</div>
+      <div class="gate-card glass-card">
+        <div class="lock-heart" aria-hidden="true">♥</div>
+        <p class="eyebrow">A little surprise, just for you</p>
+        <h1>Access Our World</h1>
+        <p class="muted small-copy">A special place, made with love 💗</p>
+        <form id="unlockForm" novalidate>
+          <label class="visually-hidden" for="guestName">Your name</label>
+          <div class="input-wrap"><span>♡</span><input id="guestName" class="form-control" value="Zaryabb Kamran" autocomplete="name" required aria-label="Your name"></div>
+          <label class="visually-hidden" for="passcode">Passcode</label>
+          <div class="input-wrap"><span>♙</span><input id="passcode" class="form-control" type="password" placeholder="Optional passcode" aria-label="Optional passcode"><button type="button" id="togglePass" class="eye-button" aria-label="Show passcode">◉</button></div>
+          <p class="error-message" id="gateError" role="alert"></p>
+          <button class="pink-button w-100" type="submit">Unlock Surprise <span>♡</span></button>
+        </form>
+        <p class="tiny-footer">Made with love, for Zaryabb ❤️</p>
+      </div>
+      <a class="skip-link" href="#birthdayScreen">Skip to birthday page</a>
+    </section>
+
+    <section class="screen hero-screen hidden" id="birthdayScreen">
+      <div class="step-number">2</div>
+      <div class="music-control"><button id="musicToggle" aria-label="Toggle background music" title="Toggle music">♫</button></div>
+      <div class="hero-content">
+        <p class="eyebrow">To my favorite person</p>
+        <h2 class="hero-title"><span>Happy</span><strong>Birthday</strong><span>Zaryabb <i class="heart-outline">♡</i></span></h2>
+        <p class="date-line">♥ <span id="birthdayDateLabel">11 October</span> ♥</p>
+        <p class="hero-copy">Today is all about you and all the happiness<br class="desktop-break"> you bring into my life every single day.</p>
+        <div class="countdown-wrap" aria-live="polite">
+          <p class="countdown-label" id="countdownLabel">The birthday magic begins in</p>
+          <div class="countdown" id="countdown">
+            <div><b id="days">00</b><span>Days</span></div><div><b id="hours">00</b><span>Hours</span></div><div><b id="minutes">00</b><span>Minutes</span></div><div><b id="seconds">00</b><span>Seconds</span></div>
+          </div>
+        </div>
+        <button class="pink-button" id="openLoveButton">Unfold Love <span>♡</span></button>
+        <p class="small muted after-midnight-note" id="afterMidnightNote">A little countdown for your special moment ✨</p>
+      </div>
+    </section>
+
+    <section class="screen memories-screen hidden" id="memoriesScreen">
+      <div class="step-number">3</div>
+      <div class="section-heading"><p class="eyebrow">♥ Our little universe ♥</p><h2>Our Precious Memories</h2><p>Moments that mean everything</p></div>
+      <div class="memory-grid">
+        <figure class="memory-card tilt-left"><div class="photo-frame"><img src="assets/image1.jpeg" alt="Our smile memory" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="photo-placeholder">Add<br>your photo</span></div><figcaption>Our Smile</figcaption></figure>
+        <figure class="memory-card tilt-right"><div class="photo-frame"><img src="assets/image2.jpeg" alt="Our favorite moment" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="photo-placeholder">Add<br>your photo</span></div><figcaption>Our Favorite Moment</figcaption></figure>
+        <figure class="memory-card tilt-left"><div class="photo-frame"><img src="assets/image3.jpeg" alt="Together forever memory" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="photo-placeholder">Add<br>your photo</span></div><figcaption>Together, Always</figcaption></figure>
+        <figure class="memory-card tilt-right"><div class="photo-frame"><img src="assets/image4.jpeg" alt="My happy place" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span class="photo-placeholder">Add<br>your photo</span></div><figcaption>My Happy Place</figcaption></figure>
+      </div>
+      <button class="pink-button" id="playMovieButton">Play Our Memory Mix <span>♡</span></button>
+      <p class="tiny muted" id="movieStatus" aria-live="polite">Your photos make this page yours. Add them in the assets folder.</p>
+    </section>
+
+    <section class="screen video-screen hidden" id="videoScreen">
+      <div class="step-number">4</div>
+      <div class="section-heading"><p class="eyebrow">♥ Our special moments ♥</p><h2>A Little Video for You</h2><p>A memory worth replaying</p></div>
+      <div class="video-card glass-card">
+        <video id="memoryVideo" controls playsinline poster="assets/WhatsApp Video 2026-09-30 at 10.46.54 PM.mp4">
+          <source src="assets/WhatsApp Video 2026-09-30 at 10.46.54 PM.mp4" type="video/mp4">
+          Your browser does not support HTML video.
+        </video>
+        <p class="tiny muted">Add your own video as <code>assets/our-video.mp4</code> to make this player work.</p>
+      </div>
+      <button class="pink-button" id="finalSurpriseButton">Open Your Final Surprise <span>♡</span></button>
+    </section>
+
+    <section class="screen letter-screen hidden" id="letterScreen">
+      <div class="step-number">5</div>
+      <div class="section-heading"><p class="eyebrow">♥ A letter from my heart ♥</p><h2>A Letter for Zaryabb</h2><p>Written with all my heart</p></div>
+      <div class="letter-card glass-card" id="letterCard">
+        <span class="letter-flower flower-one">♡</span><span class="letter-flower flower-two">♡</span>
+        <p>To the most amazing person in my life,</p>
+        <p>My dearest <strong>Zaryabb Kamran</strong>,</p>
+        <p>Happy birthday, my love. You make ordinary days feel special, and your smile has a way of making everything brighter. I hope this new year of your life brings you peace, success, laughter, and every beautiful thing your heart wishes for.</p>
+        <p>Thank you for being you. No matter how many birthdays come and go, I hope you always remember how deeply you are loved and how much happiness you deserve.</p>
+        <p class="signature">Happy Birthday, my love! ❤️</p>
+        <p class="signature">Forever yours,<br><span>With all my love 💌</span></p>
+      </div>
+      <div class="letter-actions"><button class="pink-button" id="readLetterButton">Read My Letter <span>♡</span></button><button class="outline-button" id="copyLetterButton">Copy Letter</button></div>
+      <p class="tiny muted" id="letterStatus" aria-live="polite"></p>
+    </section>
+
+    <section class="screen finale-screen hidden" id="finaleScreen">
+      <div class="step-number">6</div>
+      <div class="firework firework-one">✳</div><div class="firework firework-two">✳</div>
+      <div class="finale-content">
+        <p class="eyebrow">For you, and only you</p>
+        <h2>Happy Birthday,<br><span>Zaryabb</span> <i class="heart-outline">♡</i></h2>
+        <div class="cake" aria-label="Birthday cake illustration"><div class="candle"><span></span></div><div class="cake-top"></div><div class="cake-middle"></div><div class="cake-bottom"></div><div class="cake-plate"></div></div>
+        <p class="final-message">May your dreams find their way to you,<br>may your heart always feel loved,<br>and may this year be your most beautiful one yet.</p>
+        <p class="final-signature">With all my love, always ❤️</p>
+        <button class="pink-button" id="giftButton">Open Your Gift <span>🎁</span></button>
+        <div class="gift-message hidden" id="giftMessage" role="status">
+          <div class="gift-icon">💝</div><h3>My wish for you</h3>
+          <p>Zaryabb Kamran, I wish you a lifetime of happiness, a thousand reasons to smile, success in everything you do, and a love that keeps choosing you—today and every day. You are my favorite person. Happy Birthday! ❤️</p>
+          <button class="outline-button" id="restartButton">Relive the Surprise ↺</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <nav class="page-dots" aria-label="Birthday pages">
+    <button class="dot active" data-target="gateScreen" aria-label="Page 1"></button><button class="dot" data-target="birthdayScreen" aria-label="Page 2"></button><button class="dot" data-target="memoriesScreen" aria-label="Page 3"></button><button class="dot" data-target="videoScreen" aria-label="Page 4"></button><button class="dot" data-target="letterScreen" aria-label="Page 5"></button><button class="dot" data-target="finaleScreen" aria-label="Page 6"></button>
+  </nav>
+
+  <!-- Browser autoplay is restricted; music begins only after a user clicks the music button. -->
+  <audio id="backgroundMusic" loop preload="none">
+    <source src="assets/our-song.mp3" type="audio/mpeg">
+  </audio>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
